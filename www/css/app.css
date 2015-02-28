@@ -1,0 +1,16 @@
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #eee;
+  text-align: center;
+}
+.page {
+  display: none;
+  position: absolute;
+  top: 61px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}

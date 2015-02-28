@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/glyphs.css" />
+        <script type="text/javascript" src="js/lib/jquery.js"></script>
+        <script type="text/javascript" src="js/lib/fastclick.js"></script>
+        <script type="text/javascript" src="js/controllers/app.js"></script>
+        <script type="text/javascript" src="js/controllers/home.js"></script>
+        <script type="text/javascript" src="js/controllers/loginreg.js"></script>
+        <script type="text/javascript" src="js/controllers/login.js"></script>
+        <script type="text/javascript" src="js/controllers/register.js"></script>
+        <script type="text/javascript" src="js/controllers/create.js"></script>
+        <script type="text/javascript" src="js/controllers/select.js"></script>
+        <script type="text/javascript" src="js/controllers/photo.js"></script>
+        <title>PHUSE</title>
+    </head>
+    <body>
+        <header>
+            <span id="btnBack" class="icon icon-arrow-left"></span>
+            <h1>PHUSE</h1>
+        </header>
+        <div id="home" class="page">
+            <div id="home_msg">
+              Hi <span id="home_name"></span>!
+            </div>
+            <ul id="home_list" class="buttonlist">
+                <li id="home_create">
+                    <span class="icon icon-plus"></span>
+                    <span class="text">Create a new album
+                </li>
+                <li id="home_select">
+                    <span class="icon icon-images"></span>
+                    <span class="text">Select an album
+                </li>
+            </ul>
+        </div>
+
+		<div id="loginreg" class="page">
+            <ul id="loginreg_list" class="buttonlist">
+                <li id="loginreg_reg">
+                    <span class="icon icon-plus"></span>
+                    <span class="text">Register</span>
+                </li>
+                <li id="loginreg_login">
+                    <span class="icon icon-lock"></span>
+                    <span class="text">Log-in</span>
+                </li>
+            </ul>
+		</div>
+
+        <div id="register" class="page">
+            <div class="field">
+                <label>User name:</label>
+                <input type="text" id="register_username" placeholder="User name" maxlength="16" />
+            </div>
+            <div class="field">
+                <label>Email Address:</label>
+                <input type="email" id="register_email" placeholder="Email address" maxlength="255" />
+            </div>
+            <div class="field">
+                <label>Password:</label>
+                <input type="password" id="register_password" placeholder="Password" maxlength="16" />
+            </div>
+            <div class="field">
+                <label>Re-type Password:</label>
+                <input type="password" id="register_password2" placeholder="Re-type your password" maxlength="16" />
+            </div>
+            <button id="register_btnOK">
+                <span class="icon-checkmark"></span>
+                <span class="text">Register</span>
+            </button>
+        </div>
+
+        <div id="login" class="page">
+            <div class="field">
+                <label>User name:</label>
+                <input type="text" id="login_username" placeholder="User name" maxlength="16" />
+            </div>
+            <div class="field">
+                <label>Password:</label>
+                <input type="password" id="login_password" placeholder="Password" maxlength="16" />
+            </div>
+
+            <button id="login_btnOK">
+                <span class="icon-checkmark"></span>
+                <span class="text">Login</span>
+            </button>
+        </div>
+
+
+        <div id="create" class="page">
+            <div class="field">
+                <label>Album name:</label>
+                <input type="text" data-prop="AlbumName" id="create_name" placeholder="Album name" maxlength="50" />
+            </div>
+            <div class="field">
+                <label>Start date:</label>
+                <input type="date" id="create_date" placeholder="Start date" />
+            </div>
+            <div class="field">
+                <label>Start time:</label>
+                <input type="time" id="create_time" placeholder="Start time" />
+            </div>
+            <div class="field">
+                <label>Venue name:</label>
+                <input type="text" data-prop="VenueName" id="create_venue" placeholder="Venue name" maxlength="50" />
+            </div>
+            <div class="field">
+                <label>Venue address:</label>
+                <input type="text" data-prop="VenueAddress" id="create_address" placeholder="Venue Postcode" maxlength="10" />
+            </div>
+            <div class="field">
+                <label>Venue WIFI name:</label>
+                <input data-prop="VenueWifiName" type="text" id="create_wifiname" placeholder="Venue WIFI name" maxlength="20" />
+            </div>
+            <div class="field">
+                <label>Venue WIFI password:</label>
+                <input data-prop="VenueWifiPassword" type="text" id="create_wifipwd" placeholder="Venue WIFI password" maxlength="20" />
+            </div>
+            <div class="field">
+                <label>Password:</label>
+                <input data-prop="Password" type="text" id="register_password" placeholder="Password" maxlength="10" />
+            </div>
+            <button id="create_btnOK">
+                <span class="icon-checkmark"></span>
+                <span class="text">Create Album</span>
+            </button>
+        </div>
+
+        <div id="photo" class="page">
+          <span id="photo_camera" class="icon icon-camera"></span>
+        </div>
+
+        <div id="select" class="page">
+            <span id="select_msg" style="display:none">
+                <span class="icon-location"></span>
+                <span class="text">Getting albums based on your location...</span>
+            </span>
+
+            <ul id="select_list" class="buttonlist">
+            <!--
+                <li>
+                    <span class="icon icon-image"></span>
+                    <span class="text">Dummy Album</span>
+                </li>
+            -->
+            </ul>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
